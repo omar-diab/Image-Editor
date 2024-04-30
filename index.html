@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img-editor-icon.png">
+    <link rel="stylesheet" href="/main.css">
+    <title>Image Editor</title>
+</head>
+<body>
+    <div class="container">
+        <div class="imgs">
+            <div class="img-box">
+                <img id="img">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="uploud">
+                <label for="uploud">Uploud</label>
+                <input type="file" id="uploud">
+            </div>
+        </div>
+        <div class="filters">
+            <ul>
+                <li>
+                    <label for="saturate">Saturate</label>
+                    <input type="range" min="0" max="200" value="100" id="saturate">
+                </li>
+                <li>
+                    <label for="contrast">Contrast</label>
+                    <input type="range" min="0" max="200" value="100" id="contrast">
+                </li>
+                <li>
+                    <label for="brightness">Brightness</label>
+                    <input type="range" min="0" max="200" value="100" id="brightness">
+                </li>
+                <li>
+                    <label for="sepia">Sepia</label>
+                    <input type="range" min="0" max="200" value="0" id="sepia">
+                </li>
+                <li>
+                    <label for="grayscale">Grayscale</label>
+                    <input type="range" step="0.1" min="0" max="1" value="0" id="grayscale">
+                </li>
+                <li>
+                    <label for="blur">Blur</label>
+                    <input type="range" step="0.1" min="0" max="10" value="0" id="blur">
+                </li>
+                <li>
+                    <label for="hue-rotate">Hue Rotate</label>
+                    <input type="range" min="0" max="350" value="0" id="hue-rotate">
+                </li>
+                <li>
+                    <a download="image" id="download">Download</a>
+                    <span onclick="resetValue()">Reset</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>
